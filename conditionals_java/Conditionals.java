@@ -29,13 +29,14 @@ public class Conditionals {
    // Chatgpt question: Calculator Input: two numbers and an operator (+ - * /) very  basic will make a separate complex one in calculator repo soon !
 
 
-    Scanner a = new Scanner(System.in);
-    System.out.print("Enter the two numbers to perform operations ");
-    int num1 = a.nextInt();
-    int num2 = a.nextInt();
+     Scanner a = new Scanner(System.in);
+     System.out.print("Enter the two numbers to perform operations ");
+     int num1 = a.nextInt();
+     int num2 = a.nextInt();
 
     System.out.println("Enter the operator to use");
     String op = a.next();
+
 
     if(op.equals("+")){
         int sum = num1 + num2;
@@ -53,6 +54,30 @@ public class Conditionals {
         int div = num1 / num2;
         System.out.println(div);
     }
+
+     else if(op.equals("%")){
+         int div = num1 % num2;
+         System.out.println(div);
+    }
+
+    //Largest numbers
+
+    
+    // System.out.print("Enter the numbers to find the largest");
+    // int b= a.nextInt();
+    // int c= a.nextInt();
+    // int d= a.nextInt();
+    // if(b>c && b>d){
+    //     System.out.println("The largest number is  " +b);
+    // }
+    // else if(c>b && c>d){
+    //     System.out.println("The largest number is  " +c);
+    // }
+    // else{
+    //     System.out.println("The largest number is "+d);
+    // }
+
+
 
 }
 
