@@ -54,5 +54,10 @@ public class Loops {
             b+=1;
         }while(b<=n);
 
+    
+
     }
 }
+
+
+ 
