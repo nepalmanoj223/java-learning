@@ -9,9 +9,9 @@ public class Fibonacci {
         Scanner in= new Scanner(System.in);
         System.out.print("Enter the nth term :");
         int n=in.nextInt();
-        System.out.println(a);
-        System.out.println(b);
-        for(int i=3;i<=n; i++){
+        // System.out.println(a);
+        // System.out.println(b);
+        for(int i=2;i<=n; i++){
             int fib=a+b;
             a=b;
             b=fib;
