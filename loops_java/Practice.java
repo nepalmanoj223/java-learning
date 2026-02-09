@@ -1,7 +1,11 @@
 package loops_java;
 
+import java.util.Scanner;
+
 public class Practice {public static void main(String[] args) {
-    int num = 331;
+  Scanner in= new Scanner(System.in);
+  System.out.print("Enter the number to reverse : ");
+    int num = in.nextInt();
         int rev = 0;
 
         while (num > 0) {
@@ -10,7 +14,7 @@ public class Practice {public static void main(String[] args) {
             num = num / 10;
         }
 
-        System.out.println("Reversed: " + rev);
+        System.out.println("Reverse: " + rev);
 }
     
   }
