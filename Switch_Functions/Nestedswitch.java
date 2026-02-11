@@ -70,6 +70,7 @@ Bonus: prevent withdrawal if balance is insufficient. */
         }
                 }
                 System.out.println("Thanks for chossing my services");
+                in.close();
             }
             
         }
