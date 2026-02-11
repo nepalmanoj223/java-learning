@@ -3,15 +3,15 @@ package Atm;
 import java.util.Scanner;
 
 public class Atm {
+static Scanner in=new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner in= new Scanner(System.in);
         System.out.println("Hello Welcome to Manoj Random Atm");
         System.out.println("Please Enter your Credentials to move forward :");
         credentials();
+        menu();
     }
 
     static void credentials(){
-        Scanner in= new Scanner(System.in);
         long accountn= 407012346;
         String name= "Manoj";
         String password="Manoj@124";
@@ -40,7 +40,7 @@ public class Atm {
             }
         }
         else{
-             System.out.println("Welcome "+name);
+             System.out.println("Welcome "+name+ " please enter your password to move forward!");
 
         }
         System.out.print("Enter your Password : ");
@@ -48,10 +48,10 @@ public class Atm {
         if(!password.equals(newpass)){
             System.out.println( "Your password doesnot match you have three tries only") ;
             for(j=3; j>0; j--){
-            System.out.print( "Enter again");
+            System.out.print( "Enter again :- ");
             newpass=in.next();
             if (newpass.equals(password)) {
-                System.out.println("Welcome Mr " +newname + " What would you like to do!");
+                System.out.println("Welcome Mr " + newname + " What would you like to do!");
                 break;
             }}
             if (j == 0) { 
@@ -63,12 +63,16 @@ public class Atm {
             }
             
         }
-        else{
-            System.out.println("Welcome Mr" +newname + "What would you like to do!");
+       
         }
-        }
+        
+    static void menu(){
+        System.out.println("Menu : ");
+        System.out.print("Balance Query [1]"); System.out.print(" Withdraw [2]"); System.out.print(" Deposit [3]"); System.out.print(" Password Chnage [4]"); System.out.print(" Mini Statements [5]");
+    }
 
     }
+
     
 
 

@@ -34,13 +34,13 @@ Bonus: prevent withdrawal if balance is insufficient. */
        
         switch (task) {
             case 1:{
-                System.out.print("Your balance is : "+ balance);
+                System.out.println("Your balance is : "+ balance);
                 break;
             }
              case 2:{
                 System.out.print("ENter your desired amt : ");
                 int amt= in.nextInt();
-                if (amt>=balance){
+                if (amt>balance){
                     System.out.println("Invalid operation high amount");
                     System.out.println("please press 0 to return to same screen");
                     int ret=in.nextInt();
@@ -48,7 +48,7 @@ Bonus: prevent withdrawal if balance is insufficient. */
                         System.out.print("ENter your desired amt : ");
                          amt= in.nextInt();
 
-                         if (amt>=balance){
+                         if (amt>balance){
                         System.out.println("Invalid operation high amount");
                         System.out.println("please press 0 to return to same screen");
                          ret=in.nextInt();
