@@ -4,11 +4,15 @@ import java.util.Scanner;
 
 public class Atm {
 static Scanner in=new Scanner(System.in);
+static int balance=78500;
+static int newbalance;
+
+
     public static void main(String[] args) {
         System.out.println("Hello Welcome to Manoj Random Atm");
         System.out.println("Please Enter your Credentials to move forward :");
         credentials();
-        menu();
+        
     }
 
     static void credentials(){
@@ -61,15 +65,86 @@ static Scanner in=new Scanner(System.in);
             if (blocked == true) {
             return;
             }
-            
         }
+        else{
+            System.out.println("Welcome Mr " + newname + " What would you like to do!");
+            menu();
+        }
+         
        
         }
         
     static void menu(){
         System.out.println("Menu : ");
-        System.out.print("Balance Query [1]"); System.out.print(" Withdraw [2]"); System.out.print(" Deposit [3]"); System.out.print(" Password Chnage [4]"); System.out.print(" Mini Statements [5]");
+        System.out.print("Balance Query [1]"); System.out.print(" Withdraw [2]"); System.out.print(" Deposit [3]"); System.out.print(" Password Chnage [4]"); System.out.println(" Mini Statements [5]");
+        System.out.println("Enter the code : ");
+        int code=in.nextInt();
+        switch(code) {
+            case 1 :{balance();
+            break;}
+            case 2 :{Withdraw();
+            break;
+            }
+            case 3 :{Deposit();
+            break;}
+            case 4:
+                {
+                    Passchang();
+                    break;
+                }
+            case 5:
+                {
+                    Mini();
+                    break;
+                }
+            default:{
+                System.out.println("Invalid");
+                break;
+            }
+        }
+
+      
     }
+    static void balance(){
+        System.out.println("Your balance is : " +balance);
+    }
+    static void Withdraw(){
+        System.out.print("Enter your desired amt : ");
+        int amt=in.nextInt();
+        while (amt>balance) {
+            System.out.print("Your amt exceeds balance ! Enter again :");
+            amt=in.nextInt();
+        }
+        if (amt<=balance) {
+            System.out.println("Processing ....");
+            System.out.println("Wirthdraw complete");
+            newbalance=balance-amt;
+            System.out.println("Remaining balance is "+newbalance);
+            System.out.println("Thanks for choosing us !");
+        }
+    }
+    static void Deposit(){
+        System.out.print("Enter your desired amt : ");
+        int depo=in.nextInt();
+        newbalance=balance+depo;
+        System.out.println("Processing ....");
+        System.out.println("Deposit complete");
+        System.out.println("New balance is "+newbalance);
+
+    }
+    static void Passchang(){
+        String valid=in.next();
+        System.out.print("Do you want to change password! enter yes or no");
+        if (valid.equals("yes")) {
+            System.out.println("Reach for bank desk or call at toll free no ");
+        }
+        
+
+    }
+    static void Mini(){}
+
+
+
 
     }
 
