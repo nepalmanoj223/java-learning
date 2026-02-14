@@ -20,6 +20,7 @@ Output: sum of that something
        System.out.println(sum);
 
        nw();
+       rev();
 
     }
     static void nw(){
@@ -35,7 +36,7 @@ Output: Largest = 9, Smallest = 1
            */
         int [] in= {9,14,12,15};
         int smallest=in[0];
-        int largest=in[1];
+        int largest=in[0];
         for(int i=0; i<in.length; i++){
             if (smallest>in[i]){
                 smallest=in[i];
@@ -50,4 +51,30 @@ Output: Largest = 9, Smallest = 1
         System.out.println(largest);
 
     }
+    
+    static void rev(){
+        /*   3. Reverse an Array
+
+        Print the array in reverse order without using built-in functions like Collections.reverse().
+
+        Example:
+
+        Input: [1, 2, 3, 4]
+        Output: [4, 3, 2, 1] */
+
+        int [] arr={1,2,3,4};
+        int []next= new int[arr.length];
+        for(int i=arr.length-1; i>=0; i--){
+            for(int j=0; j<arr.length; j++){
+                if (j == arr.length - 1 - i) {       
+                next[j] = arr[i];
+        }
+
+            }
+        }
+        for (int i=0; i<next.length; i++){
+        System.out.print(next[i] +" ");
+        }
+    }
+
 }
