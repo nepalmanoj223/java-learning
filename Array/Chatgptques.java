@@ -21,6 +21,7 @@ Output: sum of that something
 
        nw();
        rev();
+       count();
 
     }
     static void nw(){
@@ -77,4 +78,26 @@ Output: Largest = 9, Smallest = 1
         }
     }
 
+    static void count(){
+        /*   
+        
+            4. Count Occurrences
+
+            Count how many times a given value appears in the array.
+
+             xample:    
+
+            Input: [1, 2, 2, 3, 2], value = 2
+            Output: 3
+            */
+        int [] a = {1,2,3,4,5,1,3};
+        int count=0;
+        // value= 2;
+        for(int i=0; i<a.length; i++){
+            if(a[i]==2){
+                count=count+1;
+            }
+        }
+        System.out.println(" The value 2 has occure " +count +" times");
+        }
 }
