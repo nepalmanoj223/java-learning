@@ -24,7 +24,7 @@ public class Fundamantel
 
             }
             for(int i=0; i<bewa.length; i++){
-                System.out.print(bewa[i]);
+                System.out.print(bewa[i]+ " ");
             }
     }
 }
