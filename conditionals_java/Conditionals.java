@@ -77,7 +77,7 @@ public class Conditionals {
     //     System.out.println("The largest number is "+d);
     // }
 
-
+a.close();
 
 }
 

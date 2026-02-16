@@ -22,6 +22,7 @@ Output: sum of that something
        nw();
        rev();
        count();
+       remove();
 
     }
     static void nw(){
@@ -100,4 +101,28 @@ Output: Largest = 9, Smallest = 1
         }
         System.out.println(" The value 2 has occure " +count +" times");
         }
-}
+
+    static void remove(){
+        /* 5. Remove Duplicates
+
+        Remove duplicates from a sorted array and print the result.
+        Hint: Use a new array or modify in-place.
+
+        Example:
+
+        Input: [1, 2, 2, 3, 3, 3, 4]
+        Output: [1, 2, 3, 4] */
+
+        int[] old={1,2,3,2,4,1,5,7,3,4};
+        int[]  neww = new int[old.length];
+        neww[0]=old[0];
+        for(int i=0; i<old.length; i++){
+            if(old[i] != neww[i]){
+                neww[i]=old[i];
+            }
+        }
+        for(int j=0; j<neww.length; j++){
+        System.out.print(neww[j] + " ");}
+    }
+
+    }

@@ -17,7 +17,8 @@ static void sum(){
     System.out.println("The sum is "+sum);
 
 
-}}
+}
+}
 
 
 
