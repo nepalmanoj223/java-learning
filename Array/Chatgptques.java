@@ -116,7 +116,7 @@ Output: Largest = 9, Smallest = 1
         int[] old={1,2,3,2,4,1,5,7,3,4};
         int[]  neww = new int[old.length];
         neww[0]=old[0];
-        for(int i=0; i<old.length; i++){
+        for(int i=1; i<old.length; i++){
             if(old[i] != neww[i]){
                 neww[i]=old[i];
             }
