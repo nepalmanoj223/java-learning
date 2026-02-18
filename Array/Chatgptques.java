@@ -1,6 +1,9 @@
 package Array;
 
+import java.util.Scanner;
+
 public class Chatgptques {
+
     public static void main(String[] args) {
         /*
         1. Sum of Array
@@ -26,6 +29,7 @@ Output: sum of that something
        arrsum();
        minmax();
        evenodd();
+       search();
     }
     static void nw(){
         /*  
@@ -178,5 +182,19 @@ static void minmax(){
         System.out.println(coutnevn);
         System.out.println(coutodd);
     }
+
+static void search(){
+Scanner in = new Scanner(System.in);
+    /*Search an Element
+    Check if a given number exists in the array. */
+    System.out.print("Enter an item to look for : ");
+    int num= in.nextInt();
+    int arr[]={1,2,34,6,4,32,13};
+    for (int i =0; i<arr.length; i++){
+        if(num==arr[i]){
+            System.out.println("your element is found in" +i+ " index !");
+        }
+    }
+}
 
     }
