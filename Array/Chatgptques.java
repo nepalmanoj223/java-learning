@@ -23,7 +23,9 @@ Output: sum of that something
        rev();
        count();
        remove();
-
+       arrsum();
+       minmax();
+       evenodd();
     }
     static void nw(){
         /*  
@@ -113,16 +115,68 @@ Output: Largest = 9, Smallest = 1
         Input: [1, 2, 2, 3, 3, 3, 4]
         Output: [1, 2, 3, 4] */
 
-        int[] old={1,2,3,2,4,1,5,7,3,4};
-        int[]  neww = new int[old.length];
-        neww[0]=old[0];
-        for(int i=1; i<old.length; i++){
-            if(old[i] != neww[i]){
-                neww[i]=old[i];
+        // int[] old={1,2,3,2,4,1,5,7,3,4};
+        // int[]  neww = new int[old.length];
+        // neww[0]=old[0];
+        // for(int i=1; i<old.length; i++){
+        //     if(old[i] != neww[i]){
+        //         neww[i]=old[i];
+        //     }
+        // }
+        // for(int j=0; j<neww.length; j++){
+        // System.out.print(neww[j] + " ");}
+    }
+
+    static void arrsum(){
+        //Sum of Elements
+        // Given an array of integers, find the sum of all elements.
+
+        int [] arr={1,2,3,4,5,6};
+        int sum=0;
+        for(int i=0; i<arr.length; i++){
+            sum=sum+arr[i];
+        }
+
+        System.out.println(sum);
+}
+
+static void minmax(){
+
+//     Without using any library functions:
+
+// Find the maximum and minimum element in the array in a single loop.
+    int [] a= {1,2,3,4,5,6,19};
+    int max=a[0];
+    int min=a[0];
+    for( int i=0; i<a.length; i++){
+        if(max<a[i]){
+            max=a[i];
+        }
+        if(min>a[i]){
+            min=a[i];
+        }
+    }
+    System.out.println(max);
+    System.out.println(min);
+
+}
+
+    static void evenodd(){
+        // Count Even & Odd
+        // Count how many even and odd numbers are in an array.
+        int coutnevn=0;
+        int coutodd=0;
+        int arr[]={1,2,3,4,5,6,8,9,69,12,45};
+        for(int i=0; i<arr.length; i++){
+            if(arr[i]%2==0){
+                coutnevn=coutnevn+1;
+            }
+            else{
+                coutodd=coutodd+1;
             }
         }
-        for(int j=0; j<neww.length; j++){
-        System.out.print(neww[j] + " ");}
+        System.out.println(coutnevn);
+        System.out.println(coutodd);
     }
 
     }
